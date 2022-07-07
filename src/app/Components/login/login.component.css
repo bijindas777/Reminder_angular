@@ -1,0 +1,54 @@
+.l1{
+    padding: 8px;
+ margin-left: 0px;
+ background-image: url(../../../assets/iphone.png);
+ height:700px ;
+}
+.login{
+    margin-left: 50px;
+}
+.loginco{
+    background-image: url(../../../assets/reminderlogin.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 700px;
+}
+#loginhead{
+text-align: center;
+font-weight: 700;
+color: rgb(27, 238, 210);
+}
+#loginbtn{
+    position: absolute;
+    padding: 10px;
+    width: 320px;
+background-color: rgb(19, 80, 71);
+left: 843px;
+
+}
+#logregbtn{
+    position: absolute;
+    width: 340px;
+    background-color: rgb(8, 168, 180);
+    color: rgb(224, 239, 237);
+    padding: 5px;
+    border-radius: 15px solid rgb(177, 41, 41);
+    width: 320px;
+left: 843px;
+
+}
+#loginUserid{
+    position: absolute;
+    width: 300px;
+    left: 852px;
+
+
+}
+#loginpswd{
+    position: absolute;
+    width: 300px;
+    left: 852px;
+
+ 
+}

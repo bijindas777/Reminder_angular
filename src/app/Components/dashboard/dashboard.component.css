@@ -1,0 +1,11 @@
+#dashbtn1{
+    width: 120px;
+   margin-left: 118px;
+}
+.dashco1{
+    background-image: url(../../../assets/reminderdashboard.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 550px;
+}
