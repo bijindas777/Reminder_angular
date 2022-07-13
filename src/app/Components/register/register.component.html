@@ -3,26 +3,35 @@
     <div class="row">
         <div class="col-4"></div>
         <div  class="col-4 c1">
-            <form >
+            <form [formGroup]="registerForm" (ngSubmit)="register()"  >
                 <div class="mb-3">
-                    <input type="uname" class="form-control inpr " name="uname" formControlName="uname" placeholder="Username" id="signinuser1" aria-describedby="emailHelp">
+                    <input type="text" class="form-control inpr " name="username" formControlName="username" placeholder="Username" id="registeruser1" aria-describedby="emailHelp">
                   </div>
-                <div class="mb-3">
-                  <input type="email" class="form-control inpr " name="email" formControlName="email" placeholder="User Id" id="signinEmail1" aria-describedby="emailHelp">
-                </div>
+ <div *ngIf=" this.registerForm.get('username')?.touched &&this.registerForm.get('username')?.errors" style="color: red;" >Invalid username</div>
 
                 <div class="mb-3">
-                  <input type="password" class="form-control inpr " name="pswd" formControlName="pswd"placeholder="Password" id="signinPassword1">
+                  <input type="text" class="form-control inpr " name="userid" formControlName="userid" placeholder="User Id" id="registeruserid1" aria-describedby="emailHelp">
                 </div>
+   <div *ngIf=" this.registerForm.get('userid')?.touched &&this.registerForm.get('userid')?.errors" style="color: red;" >Invalid userid</div>
+
+                <div class="mb-3">
+                  <input type="password" class="form-control inpr " name="pswd" formControlName="pswd"placeholder="Password" id="registerinPassword1">
+                </div>
+  <div *ngIf=" this.registerForm.get('pswd')?.touched &&this.registerForm.get('pswd')?.errors" style="color: red;" >Invalid password</div>
+
 
                 <div class="mb-3 form-check">
                 </div>
-                <button routerLink="dashboard" style="margin-left: 0px;" value="register"  type="submit" class="btn btn btr ">Register</button><br><br>
+                <button  style="margin-left: 0px;" value="register"  type="submit" class="btn btn btr ">Register</button><br><br>
                 <button class="btr1" style="margin-left:443px; border-radius: 30px; "  routerLink="">Already have an account ?.. please Log in</button>
 
               </form>
         </div>
-        <div class="col-4"></div>
+        <div class="col-4 ">
+          <div class="reg">
+
+          </div>
+        </div>
     </div>
 </div>
 <br><br>

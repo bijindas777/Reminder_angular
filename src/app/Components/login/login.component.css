@@ -1,14 +1,15 @@
 .l1{
+    margin-top: 100px;
     padding: 8px;
  margin-left: 0px;
- background-image: url(../../../assets/iphone.png);
+ /* background-image: url(../../../assets/iphone.png); */
  height:700px ;
 }
 .login{
     margin-left: 50px;
 }
 .loginco{
-    background-image: url(../../../assets/reminderlogin.jpg);
+    background-image: url(../../../assets/temporal-distance-1990035.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;

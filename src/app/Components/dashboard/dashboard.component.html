@@ -1,22 +1,52 @@
-<p>dashboard works!</p>
+<!-- <p>dashboard works!</p>
 <div class="container dashco1">
     <div class="row">
         <div class="col-4">
-            <button id="dashbtn1" type="button" class="btn btn-success"> View Event</button><br><br>
+            <button routerlink="/event" id="dashbtn1" type="button" class="btn btn-success"> View Event</button><br><br>
 
         </div>
         <div class="col-4">
-            <form action="">
-                <input class="form-control" type="date" id="date_picker" name="enter_date"><br><br>
-                <!-- <button id="dashbtn1" type="button" class="btn btn-success">Enter Date</button><br><br> -->
-                <textarea class="form-control" id="w3review" name="w3review" rows="3" cols="30" placeholder="Event Description" ></textarea><br><br>
+            <form action="" [formGroup]="eventForm" (ngSubmit)="addEvent()">
+                <input formControlName="date" class="form-control" type="date" id="date_picker"><br><br>
+                <button id="dashbtn1" type="button" class="btn btn-success">Enter Date</button><br><br>
+                 <textarea formControlName="message" class="form-control" id="w3review" rows="3" cols="30" -->
+                    <!-- placeholder="Event Description"></textarea><br><br> -->
                 <!-- <button id="dashbtn1" type="button" class="btn btn-success"> Event Description</button><br><br> -->
 
-            </form>
+                <!-- <button id="dashbtn1" type="button" class="btn btn-success"> Add Event</button><br><br> -->
+
+
+            <!-- </form> -->
+        <!-- </div> -->
+        <!-- <div class="col-4"> -->
+
+        <!-- </div> -->
+
+
+
+    <!-- </div> -->
+<!-- </div> --> 
+
+<div class="container dashco1">
+    <div class="row">
+        <h2 style="color: rgb(17, 171, 243);"><span>Welcome</span>  {{user}}</h2><br>
+        <h5 style="color: rgb(21, 2, 2);">{{lDate|date:'short'}}</h5>
+
+
+        <div class="col-4"></div>
+        <div class="col-4">
+          <form action=" " [formGroup]="eventForm" (ngSubmit)="addEvent()"  >
+          <input formControlName="date" type="date">
+            <textarea formControlName="message" id="" cols="30" rows="5"></textarea>
+            <button id="dashbtn1" class="btn btn-success">Add event</button><br><br>
+            <button id="dashbtn2" class="btn btn-success" routerLink="/event">View Event</button>
+        </form>
         </div>
         <div class="col-4">
-            <button id="dashbtn1" type="button" class="btn btn-success"> Add Event</button><br><br>
+            <div class="logout">
+                <button  class="btn btn-danger "(click)="logout()" style="float: right; margin-right: 20px;">logout</button>
 
+            </div>
         </div>
     </div>
 </div>

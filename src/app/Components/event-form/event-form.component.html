@@ -1,1 +1,52 @@
-<p>event-form works!</p>
+<!-- <p>event-form works!</p> -->
+<!-- <div class="container">
+    <h2>YOUR EVENTS</h2>
+    <div class="event_view">
+        <table class="event_table" >
+            <thead>
+                <tr>
+                    <th>DATE</th>
+                    <th>EVENTS</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr *ngFor="let i of events">
+                    <th>{{i.date}}</th>
+                    <th>{{i.message}}</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div> -->
+
+<div class="container pocket">
+    <div class="row">
+        <div class="col-2">
+            <button routerLink="/dashboard" class="btn btn-secondary">Back</button>
+        </div>
+        <div class="col-8">
+
+            <h1>YOUR  EVENTS</h1>
+
+<table class="zigzag">
+  <thead>
+    <tr>
+      <th class="header">Date</th>
+      <th class="header">Events</th>    
+    </tr>
+  </thead>
+  <tbody class="tbody"  >
+    <tr class="tbdr1" *ngFor="let i of events">
+      <td class="header2" >{{i.date}}</td>
+      <td class="header2"  >{{i.message}}</td>
+      
+    </tr>
+   
+  
+  </tbody>
+</table>
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>
