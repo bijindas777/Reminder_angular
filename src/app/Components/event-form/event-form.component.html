@@ -32,12 +32,14 @@
 <table class="zigzag">
   <thead>
     <tr>
+        <th class="header">Sl No:</th>
       <th class="header">Date</th>
       <th class="header">Events</th>    
     </tr>
   </thead>
   <tbody class="tbody"  >
-    <tr class="tbdr1" *ngFor="let i of events">
+    <tr class="tbdr1" *ngFor="let i of events;let k = index">
+        <td class="header2">{{k+1}}</td>
       <td class="header2" >{{i.date}}</td>
       <td class="header2"  >{{i.message}}</td>
       

@@ -36,8 +36,12 @@
         <div class="col-4"></div>
         <div class="col-4">
           <form action=" " [formGroup]="eventForm" (ngSubmit)="addEvent()"  >
-          <input formControlName="date" type="date">
-            <textarea formControlName="message" id="" cols="30" rows="5"></textarea>
+          <input formControlName="date" type="date"><br>
+          <div *ngIf="this.eventForm.get('date')?.touched && this.eventForm.get('date')?.errors" style="color: red;">Please Select a date</div>
+
+            <textarea formControlName="message" id="" cols="30" rows="5" id="login_message" required ></textarea><br>
+            <div *ngIf="this.eventForm.get('message')?.touched && this.eventForm.get('message')?.errors" style="color: red;">Please Fill the Field</div>
+ 
             <button id="dashbtn1" class="btn btn-success">Add event</button><br><br>
             <button id="dashbtn2" class="btn btn-success" routerLink="/event">View Event</button>
         </form>

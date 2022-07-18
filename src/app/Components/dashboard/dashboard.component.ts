@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { DataService } from '../data.service';
 
@@ -10,8 +10,8 @@ import { DataService } from '../data.service';
 })
 export class DashboardComponent implements OnInit {
 eventForm=this.fb.group({
-  date:[''],
-  message:['']
+  date:['',[Validators.required,]],
+  message:['',[Validators.required,Validators.pattern('[a-zA-Z0-9]*')]]
 })
 user:any
 lDate:any
@@ -35,20 +35,26 @@ lDate:any
   console.log(date);
   console.log(message);
 
-  this.ds.addEvent(date,message)
-  .subscribe((result:any)=>{
-    if(result){
-      alert(result.message)
-    }
-  },result=>{
-    alert(result.error.message)
-  })
+  if(this.eventForm.valid){
+    this.ds.addEvent(date,message)
+    .subscribe((result:any)=>{
+      if(result){
+        alert(result.message)
+      }
+    },result=>{
+      alert(result.error.message)
+    })
+  }
+  else{
+    alert("please fill the field")
+  }
+ 
 
 }
 
 logout(){
   localStorage.removeItem("currentUser")
-  localStorage.removeItem("currentAcno")
+  localStorage.removeItem("currentUsername")
   localStorage.removeItem("token")
 
 
